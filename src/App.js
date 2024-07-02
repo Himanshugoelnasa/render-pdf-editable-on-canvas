@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import PdfViewer from './PdfViewer';
+import PdfTextLayer from './PdfTextLayer';
+//import myPDF from 'http://localhost:3000/Sample-pdf-1.pdf'
 
-function App() {
+const App = () => {
+  //const pdfUrl = `http://localhost:3000/pdf-test.pdf`;
+  const pdfUrl = `http://localhost:3000/Sample-pdf-1.pdf`;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <PdfViewer url={pdfUrl} /> */}
+      <PdfTextLayer url={pdfUrl} />
     </div>
   );
-}
+};
 
 export default App;
+
